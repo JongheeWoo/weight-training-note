@@ -1,0 +1,35 @@
+{
+  "routine": [
+    {
+      "date": "TUE 14",
+      "title": "Arm",
+      "state": "Done",
+      "exercise": [
+        {
+          "name": "Running",
+          "minWeight": 10,
+          "maxWeight": 39,
+          "unit": "lbs",
+          "sets": 3,
+          "reps": 4
+        },
+        {
+          "name": "Fighting",
+          "minWeight": 10,
+          "maxWeight": 39,
+          "unit": "lbs",
+          "sets": 3,
+          "reps": 4
+        },
+        {
+          "name": "Running",
+          "minWeight": 10,
+          "maxWeight": 39,
+          "unit": "lbs",
+          "sets": 3,
+          "reps": 4
+        }
+      ]
+    }
+  ]
+}

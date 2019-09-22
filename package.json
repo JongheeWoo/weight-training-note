@@ -9,10 +9,15 @@
     "storybook": "start-storybook -p 7007"
   },
   "dependencies": {
+    "@fortawesome/fontawesome-svg-core": "^1.2.24",
+    "@fortawesome/free-solid-svg-icons": "^5.11.1",
+    "@fortawesome/react-native-fontawesome": "^0.1.0",
     "expo": "^34.0.1",
+    "expo-cli": "^3.1.0",
     "react": "16.8.3",
     "react-dom": "^16.8.6",
     "react-native": "https://github.com/expo/react-native/archive/sdk-34.0.0.tar.gz",
+    "react-native-svg": "^9.9.4",
     "react-native-web": "^0.11.4"
   },
   "devDependencies": {
