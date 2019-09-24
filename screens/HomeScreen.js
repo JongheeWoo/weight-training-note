@@ -1,8 +1,14 @@
 import React, { Component } from "react";
-import { View, Text, SafeAreaView, StyleSheet, ScrollView } from "react-native";
+import {
+  View,
+  Text,
+  SafeAreaView,
+  StyleSheet,
+  ScrollView,
+  Button
+} from "react-native";
 import Colors from "../assets/colors";
 import MonthIndicator from "../components/header/MonthIndicator";
-import HomeCard from "../components/list/HomeCard";
 import HomeCardList from "../components/list/HomeCardList";
 import BottomBar from "../components/section/BottomBar";
 
@@ -88,7 +94,10 @@ export default class HomeScreen extends Component {
 
         <MonthIndicator />
         <ScrollView>
-          <HomeCardList routine={this.state.routine} />
+          <HomeCardList
+            routine={this.state.routine}
+            navigation={this.props.navigation}
+          />
         </ScrollView>
         <BottomBar />
         {/* SECTION ContentSection End */}

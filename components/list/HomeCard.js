@@ -4,26 +4,26 @@ import Colors from "../../assets/colors";
 import HomeCardHeader from "./HomeCardHeader";
 import HomeExerciseListItem from "./HomeExerciseListItem";
 import HomeExerciseList from "./HomeExerciseList";
+import { withNavigation } from "react-navigation";
+const HomeCard = props => {
+  return (
+    <TouchableOpacity
+      style={styles.cardWrapper}
+      onPress={() => {
+        props.navigation.navigate("RoutineDetail");
+      }}
+    >
+      <HomeCardHeader
+        date={props.date}
+        title={props.title}
+        state={props.state}
+      />
+      <HomeExerciseList exercise={props.exercise} />
+    </TouchableOpacity>
+  );
+};
 
-export default class HomeCard extends PureComponent {
-  constructor(props) {
-    super(props);
-    this.state = {};
-  }
-
-  render() {
-    return (
-      <TouchableOpacity style={styles.cardWrapper}>
-        <HomeCardHeader
-          date={this.props.date}
-          title={this.props.title}
-          state={this.props.state}
-        />
-        <HomeExerciseList exercise={this.props.exercise} />
-      </TouchableOpacity>
-    );
-  }
-}
+export default withNavigation(HomeCard);
 
 const styles = StyleSheet.create({
   cardWrapper: {

@@ -1,8 +1,8 @@
 import React from "react";
-import { Text, View } from "react-native";
+import { Text, View, Button } from "react-native";
 import HomeCard from "./HomeCard";
 
-const HomeCardList = ({ routine }) => {
+const HomeCardList = ({ routine }, props) => {
   const homeCardList = routine.map(({ date, title, state, exercise }, key) => {
     return (
       <HomeCard
@@ -11,6 +11,7 @@ const HomeCardList = ({ routine }) => {
         state={state}
         key={key}
         exercise={exercise}
+        navigation={props.navigation}
       />
     );
   });
