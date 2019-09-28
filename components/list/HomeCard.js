@@ -1,10 +1,10 @@
-import React, { PureComponent } from "react";
+import React from "react";
 import { View, Text, StyleSheet, TouchableOpacity } from "react-native";
 import Colors from "../../assets/colors";
 import HomeCardHeader from "./HomeCardHeader";
-import HomeExerciseListItem from "./HomeExerciseListItem";
 import HomeExerciseList from "./HomeExerciseList";
 import { withNavigation } from "react-navigation";
+
 const HomeCard = props => {
   return (
     <TouchableOpacity

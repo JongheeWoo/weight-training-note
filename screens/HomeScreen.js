@@ -1,4 +1,4 @@
-import React, { Component } from "react";
+import React, { Component, useContext } from "react";
 import {
   View,
   Text,
@@ -11,101 +11,29 @@ import Colors from "../assets/colors";
 import MonthIndicator from "../components/header/MonthIndicator";
 import HomeCardList from "../components/list/HomeCardList";
 import BottomBar from "../components/section/BottomBar";
+import { DataContext } from "../DataProvider";
 
 // TODO react-native-vector-icons install: https://www.youtube.com/watch?v=B75yZwYS4z8
 
-export default class HomeScreen extends Component {
-  constructor(props) {
-    super(props);
-    this.state = {
-      routine: [
-        {
-          date: "TUE 14",
-          title: "Back and Shoulder",
-          state: "done",
-          exercise: [
-            {
-              name: "Triceps Extention",
-              minWeight: 30,
-              maxWeight: 40,
-              unit: "lbs",
-              sets: 5,
-              reps: 3
-            },
-            {
-              name: "Reverse Dumbbell Fly",
-              minWeight: 30,
-              maxWeight: 40,
-              unit: "lbs",
-              sets: 5,
-              reps: 3
-            },
-            {
-              name: "Incline Dumbbell Press",
-              minWeight: 30,
-              maxWeight: 40,
-              unit: "lbs",
-              sets: 5,
-              reps: 3
-            }
-          ]
-        },
-        {
-          date: "Mon 13",
-          title: "Legs and Back",
-          state: "failed",
-          exercise: [
-            {
-              name: "Triceps Extention",
-              minWeight: 30,
-              maxWeight: 40,
-              unit: "lbs",
-              sets: 5,
-              reps: 3
-            },
-            {
-              name: "Reverse Dumbbell Fly",
-              minWeight: 30,
-              maxWeight: 40,
-              unit: "lbs",
-              sets: 5,
-              reps: 3
-            },
-            {
-              name: "Incline Dumbbell Press",
-              minWeight: 30,
-              maxWeight: 40,
-              unit: "lbs",
-              sets: 5,
-              reps: 3
-            }
-          ]
-        }
-      ]
-    };
-  }
+const HomeScreen = props => {
+  const [routine, setRoutine] = useContext(DataContext);
 
-  render() {
-    return (
-      <View style={{ flex: 1, backgroundColor: Colors.bgNavy }}>
-        <SafeAreaView style={{ backgroundColor: Colors.bgNavy }} />
+  return (
+    <View style={{ flex: 1, backgroundColor: Colors.bgNavy }}>
+      <SafeAreaView style={{ backgroundColor: Colors.bgNavy }} />
 
-        {/* SECTION ContentSection */}
+      {/* SECTION ContentSection */}
 
-        <MonthIndicator />
-        <ScrollView>
-          <HomeCardList
-            routine={this.state.routine}
-            navigation={this.props.navigation}
-          />
-        </ScrollView>
-        <BottomBar />
-        {/* SECTION ContentSection End */}
+      <MonthIndicator />
+      <ScrollView>
+        <HomeCardList routine={routine} />
+      </ScrollView>
+      <BottomBar />
+      {/* SECTION ContentSection End */}
 
-        <SafeAreaView style={{ backgroundColor: Colors.lightGray }} />
-      </View>
-    );
-  }
-}
+      <SafeAreaView style={{ backgroundColor: Colors.lightGray }} />
+    </View>
+  );
+};
 
-// git test
+export default HomeScreen;

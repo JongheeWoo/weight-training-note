@@ -1,8 +1,11 @@
 import React from "react";
-import { StyleSheet, Text, View } from "react-native";
-import HomeScreen from "./screens/HomeScreen";
 import HomeNavigator from "./navigation/HomeNavigator";
+import { DataProvider } from "./DataProvider";
 
-const App = () => <HomeNavigator />;
+const App = props => (
+  <DataProvider>
+    <HomeNavigator {...props} />
+  </DataProvider>
+);
 
 export default App;
