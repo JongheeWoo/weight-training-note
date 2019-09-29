@@ -8,6 +8,7 @@ import { linkTo } from "@storybook/addon-links";
 import CenterView from "./CenterView";
 import ActionButton from "../../src/components/buttons/ActionButton";
 import IconButton from "../../src/components/buttons/IconButton";
+import ButtonSmallSingle from "../../src/components/buttons/ButtonSmallSingle";
 
 storiesOf("Button", module)
   .addDecorator(getStory => <CenterView>{getStory()}</CenterView>)
@@ -20,4 +21,5 @@ storiesOf("Button", module)
     <IconButton>
       <Text>Hello WOrld</Text>
     </IconButton>
-  ));
+  ))
+  .add("Button Small Single", () => <ButtonSmallSingle />);

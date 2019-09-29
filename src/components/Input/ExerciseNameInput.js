@@ -1,24 +1,22 @@
 import React from "react";
 import { Text, View, TextInput } from "react-native";
 import styled from "styled-components/native";
-import Colors from "../../styles/colors";
 
 const StyledTitleInput = styled.TextInput`
-  height: 55;
-  background-color: ${Colors.lightGrayOpacity10};
+  height: 44;
+  background-color: #181e24;
   color: #fff;
-  font-size: 24px;
+  font-size: 18px;
   letter-spacing: 0;
-  font-weight: 900;
-  font-style: italic;
+  font-weight: 700;
   border-radius: 12;
-  padding: 0 16px;
+  padding: 0 14px;
 `;
 
-const TitleInput = ({ onChange, value }) => (
+const ExerciseNameInput = ({ onChange, value }) => (
   <View>
     <StyledTitleInput
-      placeholder={"Routine Name"}
+      placeholder={"Exercise Name"}
       placeholderTextColor={"#788084"}
       onChange={onChange}
       value={value}
@@ -27,4 +25,4 @@ const TitleInput = ({ onChange, value }) => (
   </View>
 );
 
-export default TitleInput;
+export default ExerciseNameInput;

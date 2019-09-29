@@ -6,9 +6,11 @@ import { action } from "@storybook/addon-actions";
 import { linkTo } from "@storybook/addon-links";
 
 import CenterView from "./CenterView";
-import HomeCard from "../../src/components/list/HomeCard";
+
 import TitleInput from "../../src/components/Input/TitleInput";
+import ExerciseNameInput from "../../src/components/Input/ExerciseNameInput";
 
 storiesOf("Input", module)
   .addDecorator(getStory => <CenterView>{getStory()}</CenterView>)
-  .add("TitleInput", () => <TitleInput />);
+  .add("TitleInput", () => <TitleInput />)
+  .add("ExerciseNameInput", () => <ExerciseNameInput />);

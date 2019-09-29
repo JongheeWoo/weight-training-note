@@ -7,9 +7,11 @@ import { linkTo } from "@storybook/addon-links";
 
 import CenterView from "./CenterView";
 import HomeCard from "../../src/components/list/HomeCard";
+import InputCard from "../../src/components/list/InputCard";
 
 storiesOf("Card", module)
   .addDecorator(getStory => <CenterView>{getStory()}</CenterView>)
-  .add("with HomeCard", () => (
+  .add("HomeCard", () => (
     <HomeCard date="test" title="title" state="state" exercise={[]} />
-  ));
+  ))
+  .add("InputCard", () => <InputCard />);

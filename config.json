@@ -1,3 +1,4 @@
 {
-  "REACT_ENV": "staging"
+  // "REACT_ENV": "staging"
+  "REACT_ENV": "storybook"
 }
