@@ -1,9 +1,38 @@
 import React, { Component } from "react";
-import { View, Text, StyleSheet } from "react-native";
 import { Ionicons } from "@expo/vector-icons";
+import styled from "styled-components/native";
 
 import Colors from "../../assets/colors";
 import IconButton from "../buttons/IconButton";
+
+const MonthIndicatorArea = styled.View`
+  height: 60px;
+  justify-content: flex-end;
+  margin-bottom: 9px;
+`;
+
+const TextWrapper = styled.View`
+  margin-horizontal: 24px;
+  flex-direction: row;
+  align-items: center;
+`;
+
+const DateText = styled.Text`
+  font-weight: 200;
+  font-style: italic;
+  font-size: 24px;
+  color: ${Colors.primaryBlue};
+  letter-spacing: -0.9;
+`;
+
+const MonthText = styled(DateText)`
+  font-weight: 900;
+  margin-right: 4px;
+`;
+
+const IoniconsView = styled(Ionicons)`
+  padding-top: 3px;
+`;
 
 export default class MonthIndicator extends Component {
   constructor(props) {
@@ -16,50 +45,19 @@ export default class MonthIndicator extends Component {
 
   render() {
     return (
-      <View style={styles.monthIndicatorArea}>
-        <View style={styles.textWrapper}>
-          <Text style={styles.monthText}>{this.state.month}</Text>
-          <Text style={styles.yearText}>{this.state.year}</Text>
+      <MonthIndicatorArea>
+        <TextWrapper>
+          <MonthText>{this.state.month}</MonthText>
+          <DateText>{this.state.year}</DateText>
           <IconButton>
-            <Ionicons
+            <IoniconsView
               name="ios-arrow-down"
               size={20}
               color={Colors.primaryBlue}
-              style={styles.icon}
             />
           </IconButton>
-        </View>
-      </View>
+        </TextWrapper>
+      </MonthIndicatorArea>
     );
   }
 }
-
-const styles = StyleSheet.create({
-  monthIndicatorArea: {
-    height: 60,
-    justifyContent: "flex-end",
-    marginBottom: 9
-  },
-  textWrapper: {
-    marginHorizontal: 24,
-    display: "flex",
-    flexDirection: "row",
-    alignItems: "center"
-  },
-  monthText: {
-    color: Colors.primaryBlue,
-    fontWeight: "900",
-    fontStyle: "italic",
-    fontSize: 24,
-    letterSpacing: -0.9,
-    marginRight: 4
-  },
-  yearText: {
-    color: Colors.primaryBlue,
-    fontWeight: "200",
-    fontStyle: "italic",
-    fontSize: 24,
-    letterSpacing: -0.9
-  },
-  icon: { paddingTop: 3 }
-});
