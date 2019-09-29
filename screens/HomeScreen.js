@@ -1,12 +1,5 @@
 import React, { Component, useContext } from "react";
-import {
-  View,
-  Text,
-  SafeAreaView,
-  StyleSheet,
-  ScrollView,
-  Button
-} from "react-native";
+import { View, Text, SafeAreaView, ScrollView, Button } from "react-native";
 import Colors from "../assets/colors";
 import MonthIndicator from "../components/header/MonthIndicator";
 import HomeCardList from "../components/list/HomeCardList";
@@ -26,7 +19,12 @@ const HomeScreen = props => {
 
       <MonthIndicator />
       <ScrollView>
-        <HomeCardList routine={routine} />
+        <HomeCardList
+          routine={routine}
+          onPress={key => () => {
+            props.navigation.navigate("RoutineDetail");
+          }}
+        />
       </ScrollView>
       <BottomBar />
       {/* SECTION ContentSection End */}

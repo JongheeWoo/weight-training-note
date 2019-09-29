@@ -3,16 +3,10 @@ import { View, Text, StyleSheet, TouchableOpacity } from "react-native";
 import Colors from "../../assets/colors";
 import HomeCardHeader from "./HomeCardHeader";
 import HomeExerciseList from "./HomeExerciseList";
-import { withNavigation } from "react-navigation";
 
 const HomeCard = props => {
   return (
-    <TouchableOpacity
-      style={styles.cardWrapper}
-      onPress={() => {
-        props.navigation.navigate("RoutineDetail");
-      }}
-    >
+    <TouchableOpacity style={styles.cardWrapper} onPress={props.onPress}>
       <HomeCardHeader
         date={props.date}
         title={props.title}
@@ -23,7 +17,7 @@ const HomeCard = props => {
   );
 };
 
-export default withNavigation(HomeCard);
+export default HomeCard;
 
 const styles = StyleSheet.create({
   cardWrapper: {

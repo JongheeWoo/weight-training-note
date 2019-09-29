@@ -6,6 +6,10 @@ import { action } from "@storybook/addon-actions";
 import { linkTo } from "@storybook/addon-links";
 
 import CenterView from "./CenterView";
-import Welcome from "./Welcome";
-import "./Button";
-import "./Card";
+import HomeCard from "../../components/list/HomeCard";
+
+storiesOf("Card", module)
+  .addDecorator(getStory => <CenterView>{getStory()}</CenterView>)
+  .add("with HomeCard", () => (
+    <HomeCard date="test" title="title" state="state" exercise={[]} />
+  ));
