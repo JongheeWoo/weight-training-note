@@ -1,6 +1,6 @@
 import React from "react";
 import { Text, View, StyleSheet } from "react-native";
-import Colors from "../../assets/colors";
+import Colors from "../../styles/colors";
 
 const HomeExerciseListItem = ({
   name,

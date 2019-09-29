@@ -1,6 +1,6 @@
 import React from "react";
 import { Text, View, StyleSheet, TouchableOpacity } from "react-native";
-import Colors from "../../assets/colors";
+import Colors from "../../styles/colors";
 
 const ActionButtons = ({ children, style }) => (
   <TouchableOpacity style={[styles.background, style]}>

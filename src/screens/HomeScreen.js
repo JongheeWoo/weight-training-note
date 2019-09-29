@@ -1,11 +1,12 @@
 import React, { Component, useContext } from "react";
 import { View, Text, SafeAreaView, ScrollView, Button } from "react-native";
-import Colors from "../assets/colors";
+import { withNavigation } from "react-navigation";
+
+import Colors from "../styles/colors";
 import MonthIndicator from "../components/header/MonthIndicator";
 import HomeCardList from "../components/list/HomeCardList";
 import BottomBar from "../components/section/BottomBar";
-import { DataContext } from "../DataProvider";
-import { withNavigation } from "react-navigation";
+import { DataContext } from "../contexts/DataProvider";
 
 // TODO react-native-vector-icons install: https://www.youtube.com/watch?v=B75yZwYS4z8
 

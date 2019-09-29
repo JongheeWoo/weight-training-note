@@ -1,7 +1,7 @@
 import React from "react";
 import { View, StyleSheet } from "react-native";
 import { Ionicons } from "@expo/vector-icons";
-import Colors from "../../assets/colors";
+import Colors from "../../styles/colors";
 
 function getColorByState(state) {
   switch (state) {

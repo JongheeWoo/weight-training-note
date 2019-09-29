@@ -2,7 +2,7 @@ import React, { Component } from "react";
 import { Ionicons } from "@expo/vector-icons";
 import styled from "styled-components/native";
 
-import Colors from "../../assets/colors";
+import Colors from "../../styles/colors";
 import IconButton from "../buttons/IconButton";
 
 const MonthIndicatorArea = styled.View`

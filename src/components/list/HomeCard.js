@@ -1,6 +1,6 @@
 import React from "react";
 import { View, Text, StyleSheet, TouchableOpacity } from "react-native";
-import Colors from "../../assets/colors";
+import Colors from "../../styles/colors";
 import HomeCardHeader from "./HomeCardHeader";
 import HomeExerciseList from "./HomeExerciseList";
 

@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import { View, Text, TouchableOpacity, StyleSheet } from "react-native";
-import Colors from "../../assets/colors";
+import Colors from "../../styles/colors";
 import ActionButton from "../buttons/ActionButton";
 import NavButton from "../buttons/NavButton";
 import { Ionicons } from "@expo/vector-icons";

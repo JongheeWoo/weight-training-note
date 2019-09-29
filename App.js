@@ -1,6 +1,6 @@
 import React from "react";
-import HomeNavigator from "./navigation/HomeNavigator";
-import { DataProvider } from "./DataProvider";
+import HomeNavigator from "./src/navigations/HomeNavigator";
+import { DataProvider } from "./src/contexts/DataProvider";
 import env from "./src/configs/env";
 
 let App = props => (

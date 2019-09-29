@@ -6,8 +6,8 @@ import { action } from "@storybook/addon-actions";
 import { linkTo } from "@storybook/addon-links";
 
 import CenterView from "./CenterView";
-import ActionButton from "../../components/buttons/ActionButton";
-import IconButton from "../../components/buttons/IconButton";
+import ActionButton from "../../src/components/buttons/ActionButton";
+import IconButton from "../../src/components/buttons/IconButton";
 
 storiesOf("Button", module)
   .addDecorator(getStory => <CenterView>{getStory()}</CenterView>)

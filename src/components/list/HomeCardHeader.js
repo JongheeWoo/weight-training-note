@@ -1,7 +1,7 @@
 import React from "react";
 import { Text, View, StyleSheet } from "react-native";
 import StateIcon from "../icons/StateIcon";
-import Colors from "../../assets/colors";
+import Colors from "../../styles/colors";
 import IconButton from "../buttons/IconButton";
 import { Ionicons } from "@expo/vector-icons";
 
