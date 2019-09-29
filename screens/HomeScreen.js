@@ -5,6 +5,7 @@ import MonthIndicator from "../components/header/MonthIndicator";
 import HomeCardList from "../components/list/HomeCardList";
 import BottomBar from "../components/section/BottomBar";
 import { DataContext } from "../DataProvider";
+import { withNavigation } from "react-navigation";
 
 // TODO react-native-vector-icons install: https://www.youtube.com/watch?v=B75yZwYS4z8
 
@@ -34,4 +35,4 @@ const HomeScreen = props => {
   );
 };
 
-export default HomeScreen;
+export default withNavigation(HomeScreen);
