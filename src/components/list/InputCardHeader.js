@@ -8,6 +8,7 @@ import Colors from "../../styles/colors";
 
 const HeaderArea = styled.View`
   flex-direction: row;
+  display: flex;
 `;
 
 const InputCardHeader = () => (
