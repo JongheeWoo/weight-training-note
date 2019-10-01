@@ -5,32 +5,37 @@ import ActionButton from "../buttons/ActionButton";
 import NavButton from "../buttons/NavButton";
 import { Ionicons } from "@expo/vector-icons";
 
-export default class BottomBar extends Component {
-  constructor(props) {
-    super(props);
-    this.state = {};
-  }
-
-  render() {
-    return (
-      <View style={styles.wrapper}>
-        <View style={styles.navBtnArea}>
-          <NavButton label={"Memo"} isOn={true} />
-          <NavButton label={"Records"} isOn={false} />
-        </View>
-
-        <View style={styles.buttonArea}>
-          <ActionButton>
-            <Ionicons name="ios-search" size={22} color={Colors.lightGray} />
-          </ActionButton>
-          <ActionButton style={{ marginLeft: 14 }}>
-            <Ionicons name="ios-add" size={22} color={Colors.lightGray} />
-          </ActionButton>
-        </View>
+const BottomBar = ({
+  onPress,
+  onPressRecord,
+  onPressMemo,
+  onPressAddRoutine
+}) => {
+  return (
+    <View style={styles.wrapper}>
+      <View style={styles.navBtnArea}>
+        <NavButton label={"Memo"} isOn={true} />
+        <NavButton label={"Records"} isOn={false} />
       </View>
-    );
-  }
-}
+
+      <View style={styles.buttonArea}>
+        <ActionButton>
+          <Ionicons name="ios-search" size={22} color={Colors.lightGray} />
+        </ActionButton>
+        <ActionButton style={{ marginLeft: 14 }}>
+          <Ionicons
+            name="ios-add"
+            size={22}
+            color={Colors.lightGray}
+            onPress={onPressAddRoutine}
+          />
+        </ActionButton>
+      </View>
+    </View>
+  );
+};
+
+export default BottomBar;
 
 const styles = StyleSheet.create({
   wrapper: {

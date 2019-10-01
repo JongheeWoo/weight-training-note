@@ -7,11 +7,11 @@ import MonthIndicator from "../components/header/MonthIndicator";
 import HomeCardList from "../components/list/HomeCardList";
 import BottomBar from "../components/section/BottomBar";
 import { DataContext } from "../contexts/DataProvider";
-import ActionButtons from "../components/buttons/ActionButton";
+import InputCard from "../components/list/InputCard";
 
 // TODO react-native-vector-icons install: https://www.youtube.com/watch?v=B75yZwYS4z8
 
-const HomeScreen = props => {
+const AddRoutineScreen = props => {
   const [routine, setRoutine] = useContext(DataContext);
 
   return (
@@ -20,25 +20,14 @@ const HomeScreen = props => {
 
       {/* SECTION ContentSection */}
 
-      <MonthIndicator />
-      <ScrollView>
-        <HomeCardList
-          routine={routine}
-          onPress={key => () => {
-            props.navigation.navigate("RoutineDetail");
-          }}
-        />
-      </ScrollView>
-      <BottomBar
-        onPressAddRoutine={() => {
-          props.navigation.navigate("AddRoutine");
-        }}
-      />
-      {/* SECTION ContentSection End */}
+      <View style={{ paddingHorizontal: 16 }}>
+        <InputCard />
+        <InputCard />
+      </View>
 
       <SafeAreaView style={{ backgroundColor: Colors.lightGray }} />
     </View>
   );
 };
 
-export default withNavigation(HomeScreen);
+export default withNavigation(AddRoutineScreen);

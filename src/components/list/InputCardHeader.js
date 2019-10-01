@@ -8,7 +8,8 @@ import Colors from "../../styles/colors";
 
 const HeaderArea = styled.View`
   flex-direction: row;
-  display: flex;
+  /* align-items: stretch; */
+  width: 100%;
 `;
 
 const InputCardHeader = () => (
@@ -17,6 +18,10 @@ const InputCardHeader = () => (
       style={{
         marginRight: 8,
         width: 44
+        // flexBasis: 44,
+        // flexGrow: 0,
+        // flexShrik: 0,
+        // flex: 1
       }}
     >
       <Ionicons name="ios-add" size={18} color={Colors.lightGray} />

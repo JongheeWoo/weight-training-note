@@ -2,8 +2,8 @@ import React from "react";
 import { Text, View, StyleSheet, TouchableOpacity } from "react-native";
 import Colors from "../../styles/colors";
 
-const ActionButtons = ({ children, style }) => (
-  <TouchableOpacity style={[styles.background, style]}>
+const ActionButtons = ({ children, style, onPress }) => (
+  <TouchableOpacity style={[styles.background, style]} onPress={onPress}>
     {children}
   </TouchableOpacity>
 );

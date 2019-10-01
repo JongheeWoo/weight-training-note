@@ -4,20 +4,23 @@ import styled from "styled-components/native";
 import Colors from "../../styles/colors";
 import InputCardHeader from "./InputCardHeader";
 import SetInputListItem from "./SetInputListItem";
+import IconWithLabelButton from "../buttons/IconWithLabelButton";
+import ExerciseNameInput from "../Input/ExerciseNameInput";
 
 const InputCardWrapper = styled.View`
   background-color: ${Colors.lightNavy};
   padding: 16px;
   border-radius: 24;
-  width: ${Dimensions.get("window").width - 16};
+  width: 100%;
 `;
 
-const InputCard = ({ params }) => (
+const InputCard = ({}) => (
   <InputCardWrapper>
     <InputCardHeader />
     <SetInputListItem />
     <SetInputListItem />
     <SetInputListItem />
+    <IconWithLabelButton />
   </InputCardWrapper>
 );
 
