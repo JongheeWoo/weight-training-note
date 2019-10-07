@@ -3,6 +3,8 @@ import { createAppContainer } from "react-navigation";
 import HomeScreen from "../screens/HomeScreen";
 import RoutineDetailScreen from "../screens/RoutineDetailScreen";
 import AddRoutineScreen from "../screens/AddRoutineScreen";
+import Colors from "../styles/colors";
+import IconButton from "../components/buttons/IconButton";
 
 const HomeNavigator = createStackNavigator({
   Home: {
@@ -14,28 +16,12 @@ const HomeNavigator = createStackNavigator({
   RoutineDetail: RoutineDetailScreen,
   AddRoutine: {
     screen: AddRoutineScreen,
-    navigationOptions: {}
+    navigationOptions: {
+      headerStyle: {
+        backgroundColor: "#04080F"
+      }
+    }
   }
 });
-
-// const ModalStack = createStackNavigator(
-//   {
-//     Home: {
-//       screen: HomeScreen,
-//       navigationOptions: {
-//         header: null
-//       }
-//     },
-//     AddRoutine: {
-//       screen: AddRoutineScreen,
-//       navigationOptions: {
-//         header: null
-//       }
-//     }
-//   },
-//   {
-//     mode: "modal"
-//   }
-// );
 
 export default createAppContainer(HomeNavigator);

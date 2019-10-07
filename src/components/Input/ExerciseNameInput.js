@@ -18,15 +18,13 @@ const StyledTitleInput = styled.TextInput`
 `;
 
 const ExerciseNameInput = ({ onChange, value }) => (
-  <View>
-    <StyledTitleInput
-      placeholder={"Exercise Name"}
-      placeholderTextColor={"#788084"}
-      onChange={onChange}
-      value={value}
-      keyboardAppearance={"dark"}
-    ></StyledTitleInput>
-  </View>
+  <StyledTitleInput
+    placeholder={"Exercise Name"}
+    placeholderTextColor={"#788084"}
+    onChange={onChange}
+    value={value}
+    keyboardAppearance={"dark"}
+  />
 );
 
 export default ExerciseNameInput;

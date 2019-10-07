@@ -1,32 +1,28 @@
 import React from "react";
 import { Text, View, TextInput } from "react-native";
 import styled from "styled-components/native";
+import { PropTypes } from "prop-types";
 
 const SetInputWrapper = styled.View`
   flex-direction: row;
+  border-radius: 12;
+  background-color: #181e24;
   margin-left: 8;
 `;
 
 const StyledSetInput = styled.TextInput`
   height: 44;
-  width: 50;
-  background-color: #181e24;
   color: #fff;
+  width: 54;
   font-size: 18px;
   letter-spacing: 0;
   font-weight: 700;
-  border-top-left-radius: 12;
-  border-bottom-left-radius: 12;
   padding-left: 14px;
 `;
 
 const UnitTextArea = styled.View`
   height: 44;
-  background-color: #181e24;
-  border-top-right-radius: 12;
-  border-bottom-right-radius: 12;
   padding-right: 14px;
-  padding-left: 4px;
   align-items: center;
   justify-content: center;
 `;
@@ -44,10 +40,11 @@ const SetInput = ({ onChange, value, type, style }) => (
       placeholder={value}
       placeholderTextColor={"#788084"}
       onChange={onChange}
-      value={value}
+      // value={String()}
       numeric
       keyboardAppearance={"dark"}
       keyboardType={"numeric"}
+      maxLength={3}
     />
     <UnitTextArea>
       <UnitText>
@@ -59,7 +56,13 @@ const SetInput = ({ onChange, value, type, style }) => (
 
 export default SetInput;
 
+// ANCHOR Failed prop type: Invalid prop 'value' of type 'number' supplied to 'TextInput, expected 'string'
+
 SetInput.defaultProps = {
-  value: 100,
+  value: "100",
   type: "unit"
 };
+
+// SetInput.propTypes = {
+//   value: PropTypes.number
+// };

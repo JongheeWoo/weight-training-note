@@ -5,6 +5,7 @@ import ExerciseNameInput from "../Input/ExerciseNameInput";
 import styled from "styled-components/native";
 import { Ionicons } from "@expo/vector-icons";
 import Colors from "../../styles/colors";
+import { TextInput } from "react-native-gesture-handler";
 
 const HeaderArea = styled.View`
   flex-direction: row;
@@ -18,10 +19,6 @@ const InputCardHeader = () => (
       style={{
         marginRight: 8,
         width: 44
-        // flexBasis: 44,
-        // flexGrow: 0,
-        // flexShrik: 0,
-        // flex: 1
       }}
     >
       <Ionicons name="ios-add" size={18} color={Colors.lightGray} />

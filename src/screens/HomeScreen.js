@@ -1,5 +1,12 @@
 import React, { Component, useContext } from "react";
-import { View, Text, SafeAreaView, ScrollView, Button } from "react-native";
+import {
+  View,
+  Text,
+  SafeAreaView,
+  ScrollView,
+  Button,
+  StatusBar
+} from "react-native";
 import { withNavigation } from "react-navigation";
 
 import Colors from "../styles/colors";
@@ -17,7 +24,7 @@ const HomeScreen = props => {
   return (
     <View style={{ flex: 1, backgroundColor: Colors.bgNavy }}>
       <SafeAreaView style={{ backgroundColor: Colors.bgNavy }} />
-
+      <StatusBar barStyle="light-content" backgroundColor={Colors.bgNavy} />
       {/* SECTION ContentSection */}
 
       <MonthIndicator />

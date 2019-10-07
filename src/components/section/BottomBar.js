@@ -22,13 +22,8 @@ const BottomBar = ({
         <ActionButton>
           <Ionicons name="ios-search" size={22} color={Colors.lightGray} />
         </ActionButton>
-        <ActionButton style={{ marginLeft: 14 }}>
-          <Ionicons
-            name="ios-add"
-            size={22}
-            color={Colors.lightGray}
-            onPress={onPressAddRoutine}
-          />
+        <ActionButton style={{ marginLeft: 14 }} onPress={onPressAddRoutine}>
+          <Ionicons name="ios-add" size={22} color={Colors.lightGray} />
         </ActionButton>
       </View>
     </View>

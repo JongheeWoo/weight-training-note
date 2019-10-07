@@ -12,6 +12,7 @@ const InputCardWrapper = styled.View`
   padding: 16px;
   border-radius: 24;
   width: 100%;
+  margin-top: 16;
 `;
 
 const InputCard = ({}) => (
