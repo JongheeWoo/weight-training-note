@@ -4,11 +4,41 @@ import HomeNavigator from "./src/navigations/HomeNavigator";
 import { DataProvider } from "./src/contexts/DataProvider";
 import env from "./src/configs/env";
 import { initialize as firebaseInitialize } from "./src/configs/firebase";
-import { storeHighScore } from "./src/configs/database";
+import { saveRoutine } from "./src/configs/database";
 
 firebaseInitialize();
 
-storeHighScore("test", 10);
+// saveRoutine({
+//   userId: "test",
+//   title: "Back and Shoulder",
+//   status: "done",
+//   exercises: [
+//     {
+//       name: "Triceps Extention",
+//       minWeight: 30,
+//       maxWeight: 40,
+//       unit: "lbs",
+//       sets: 5,
+//       reps: 3
+//     },
+//     {
+//       name: "Reverse Dumbbell Fly",
+//       minWeight: 30,
+//       maxWeight: 40,
+//       unit: "lbs",
+//       sets: 5,
+//       reps: 3
+//     },
+//     {
+//       name: "Incline Dumbbell Press",
+//       minWeight: 30,
+//       maxWeight: 40,
+//       unit: "lbs",
+//       sets: 5,
+//       reps: 3
+//     }
+//   ]
+// });
 
 let App = props => (
   <DataProvider>
