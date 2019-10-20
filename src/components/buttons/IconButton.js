@@ -17,3 +17,8 @@ const styles = StyleSheet.create({
     alignItems: "center"
   }
 });
+
+// ANCHOR set component as a defaultProps
+// IconButton.defaultProps = {
+//   children:
+// };

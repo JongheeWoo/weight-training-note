@@ -3,7 +3,7 @@ import { Text, View, StyleSheet } from "react-native";
 import StateIcon from "../icons/StateIcon";
 import Colors from "../../styles/colors";
 import IconButton from "../buttons/IconButton";
-import { Ionicons } from "@expo/vector-icons";
+import { Ionicons, FontAwesome } from "@expo/vector-icons";
 
 const HomeCardHeader = ({ state, date, title }) => (
   <View style={styles.wrapper}>
@@ -14,8 +14,8 @@ const HomeCardHeader = ({ state, date, title }) => (
     <View style={styles.titleArea}>
       <Text style={styles.title}>{title}</Text>
       <IconButton style={styles.moreButton}>
-        <Ionicons
-          name="ios-more"
+        <FontAwesome
+          name="ellipsis-h"
           style={{ color: Colors.lightGray }}
           size={22}
         />
