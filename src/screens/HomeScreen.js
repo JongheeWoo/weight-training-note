@@ -40,6 +40,11 @@ const HomeScreen = props => {
         onPressAddRoutine={() => {
           props.navigation.navigate("AddRoutine");
         }}
+        onPressSearch={() => {
+          props.navigation.navigate("SearchScreen", {
+            sharedElements: ['search'],
+          });
+        }}
       />
       {/* SECTION ContentSection End */}
 
