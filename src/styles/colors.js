@@ -6,6 +6,8 @@ const Colors = {
   primaryBlue: "#507DBC",
   red: "#BC5050",
   bgNavy: "#04080F",
-  lightNavy: "#10141B"
+  lightNavy: "#10141B",
+  wBlack: "#000000",
+  wGray: "#000000"
 };
 export default Colors;
