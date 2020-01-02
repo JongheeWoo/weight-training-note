@@ -1,4 +1,5 @@
 {
+  "name": "weight-training-note",
   "main": "node_modules/expo/AppEntry.js",
   "scripts": {
     "start": "expo start",
@@ -8,6 +9,7 @@
     "eject": "expo eject",
     "storybook": "start-storybook -p 7007",
     "build:android": "expo build:android",
+    "build:android:bundle": "expo build:android -t app-bundle",
     "build:ios": "expo build:ios"
   },
   "dependencies": {
