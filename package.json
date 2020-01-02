@@ -10,7 +10,9 @@
     "storybook": "start-storybook -p 7007",
     "build:android": "expo build:android",
     "build:android:bundle": "expo build:android -t app-bundle",
-    "build:ios": "expo build:ios"
+    "build:ios": "expo build:ios",
+    "upload:ios": "expo upload:ios",
+    "upload:android": "expo upload:android"
   },
   "dependencies": {
     "@fortawesome/fontawesome-svg-core": "^1.2.24",
